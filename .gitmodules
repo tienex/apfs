@@ -1,0 +1,3 @@
+[submodule "third_party/libxo/libxo"]
+	path = third_party/libxo/libxo
+	url = https://github.com/Juniper/libxo.git

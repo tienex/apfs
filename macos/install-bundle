@@ -1,0 +1,54 @@
+#! /usr/bin/env bash
+#
+# Copyright (c) 2017-present Orlando Bassotto
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in all
+# copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
+
+
+#
+# Execute this script as root
+#
+SW_VERS=/usr/bin/sw_vers
+SED=/usr/bin/sed
+
+if [ ! -x $SW_VERS ]; then
+    echo "Are you running on macOS?"
+    exit 1
+fi
+
+product_version=`$SW_VERS -productVersion`
+version=( ${product_version//./ } )
+
+if [ ${version[0]} -gt 10 ] || [ ${version[1]} -ge 12 ]; then
+    echo "Won't install on macOS 10.12 or higher."
+    exit 2
+fi
+
+if test $UID -ne 0; then
+    echo "You must be root to run this script."
+    exit 3
+fi
+
+set -x
+
+rm -rf /Library/Filesystems/nxapfs.fs
+cp -rp macos/nxapfs.fs /Library/Filesystems/
+chown -R root:wheel /Library/Filesystems/nxapfs.fs
+ln -sf /Library/Filesystems/nxapfs.fs /System/Library/Filesystems/
+ln -sf /Library/Filesystems/nxapfs.fs/Contents/Resources/mount_nx /sbin/mount_apfs

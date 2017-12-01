@@ -1,0 +1,7 @@
+.DS_Store
+block.*
+newblock.*
+header.*
+*~
+.gdb_history
+*.o

@@ -1,0 +1,21 @@
+#define LIBXO_VERSION "nx-git-head"
+#define LIBXO_VERSION_EXTRA ""
+
+#define XO_ENCODERDIR "@CMAKE_INSTALL_PREFIX@/lib/libxo/encoder"
+
+#cmakedefine HAVE_DLFCN_H @HAVE_DLFCN_H@
+#cmakedefine HAVE_STDIO_EXT_H @HAVE_STDIO_EXT_H@
+#cmakedefine HAVE_LIBUTIL_H @HAVE_LIBUTIL_H@
+#cmakedefine HAVE_SYS_UN_H @HAVE_SYS_UN_H@
+#cmakedefine HAVE_SYS_SYSLOG_H @HAVE_SYS_SYSLOG_H@
+
+#cmakedefine HAVE___FLBF @HAVE___FLBF@
+#cmakedefine HAVE_HUMANIZE_NUMBER @HAVE_HUMANIZE_NUMBER@
+#cmakedefine HAVE_DLFUNC @HAVE_DLFUNC@
+#cmakedefine HAVE_SYSLOG @HAVE_SYSLOG@
+
+#cmakedefine HAVE___ISTHREADED @HAVE___ISTHREADED@
+
+#cmakedefine HAVE_SUN_LEN @HAVE_SUN_LEN@
+
+#cmakedefine HAVE_THREAD_LOCAL @HAVE_THREAD_LOCAL@

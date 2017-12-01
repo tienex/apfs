@@ -1,0 +1,31 @@
+#cmakedefine HAVE_SYS_MKDEV_H
+#cmakedefine HAVE_SYS_MOUNT_H
+#cmakedefine HAVE_SYS_PARAM_H
+#cmakedefine HAVE_SYS_STATFS_H
+#cmakedefine HAVE_SYS_STATVFS_H
+#cmakedefine HAVE_SYS_SYSMACROS_H
+#cmakedefine HAVE_SYS_VFS_H
+
+#cmakedefine HAVE_STATFS
+#cmakedefine HAVE_STATVFS
+
+#cmakedefine HAVE_STATFS_F_BAVAIL
+#cmakedefine HAVE_STATFS_F_IOSIZE
+#cmakedefine HAVE_STATFS_F_FRSIZE
+#cmakedefine HAVE_STATFS_F_FLAG
+
+#cmakedefine HAVE_STATVFS_F_FLAGS
+
+#cmakedefine HAVE_STAT_ST_MTIM
+#cmakedefine HAVE_STAT_ST_MTIMENSEC
+#cmakedefine HAVE_STAT_ST_MTIMESPEC
+#cmakedefine HAVE_STAT_ST_BIRTHTIME
+#cmakedefine HAVE_STAT___ST_BIRTHTIME
+#cmakedefine HAVE_STAT_ST_BIRTHTIMENSEC
+#cmakedefine HAVE_STAT___ST_BIRTHTIMENSEC
+#cmakedefine HAVE_STAT_ST_BIRTHTIM
+#cmakedefine HAVE_STAT___ST_BIRTHTIM
+#cmakedefine HAVE_STAT_ST_BIRTHTIMESPEC
+#cmakedefine HAVE_STAT_ST_BLKSIZE
+#cmakedefine HAVE_STAT_ST_BLOCKS
+#cmakedefine HAVE_STAT_ST_FLAGS

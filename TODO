@@ -1,0 +1,108 @@
+Tools:
+
+[ ] Create nx_shell.
+    [ ] volume
+    [ ] omap
+    [ ] scavenge
+    [ ] checkpoint
+    [ ] spaceman
+    [ ] cd
+    [ ] stat
+    [ ] ls
+    [ ] cp
+    [ ] xattr
+    [ ] help
+[X] Rework apfs_extract to use libapfs.
+[ ] Extract should allow flexible management of xattrs.
+    (Add option to extract EA to ADS on Windows)
+
+Libraries:
+
+[X] libnx: Cleanup dumpers. (Pretty print)
+    [X] Investigate libxo.
+[X] libnx: Merge apfs dumpers?
+[X] libnx: Dump symbolic flags where possible.
+[X] libnx: Dump unknown entries everywhere.
+
+[X] libapfs: handle case insensitive volumes.
+[X] libapfs: correct handling of char/block devices (mknod)
+[X] libapfs: should check statvfs/statfs presence.
+[X] libapfs: should check stat fields.
+[X] libapfs: should convert bsd_flags to native st_flags.
+[ ] libapfs: handle crypto volumes.
+
+[X] libnx_compat: Add getting block count/block size for Solaris.
+[X] libnx_compat: Add getting block count/block size for OpenBSD.
+[X] libnx_compat: Rename to libnxcompat
+[X] libnx_compat: Move to top level
+[X] libnx_compat: Rules to install (to allow static linking).
+
+[X] libnxtools: Add file logging facility.
+[X] libnxtools: Add syslog facility.
+[X] libnxtools: Rules to install (to allow static linking).
+[X] libnxtools: Convert bsd_flags to native st_flags.
+
+Mount:
+
+[ ] Cleanup options logic
+[X] Create mount_nx to mount an entire container.
+[X] mount_nx: Should behave like mount_apfs when just one volume
+[ ] mount_nx: Emulate icons per volume per folder.
+[X] mount_nx: macOS name should be the "APFS Container <UUID>"
+[X] Expose resource fork via ._filename (-o rsrcfork)
+[X] Expose extended attributes in ..xattr/filename/xattrname (-o xattrdir)
+    (On Windows prefer $XATTR/filename/xattrname)
+
+[ ] Try WinFsp to see if we can make it work on Windows too.
+    (https://github.com/billziss-gh/winfsp)
+
+General:
+
+[X] Add NXAPFS_VERSION at the top level cmakefile
+
+[X] Fix system specifics (ie remove __NetBSD__, __OpenBSD__, __FreeBSD__, __linux__)
+[ ] Fix installation rpath issues
+
+[ ] Create pkg-config configuration.
+
+[X] Cleanup Apple multiarch code (add detection of supported targets
+        automatically)
+
+[X] Fix FUSE detection cmake script
+
+[ ] Test with Windows Visual Studio (VS2017 minimum required)
+[ ] Test with Windows mingw
+
+[ ] Test with Windows real device
+[X] Test with OpenBSD real device
+[X] Test with NetBSD real device
+[X] Test with FreeBSD real device
+[X] Test with DragonFlyBSD real device
+[ ] Test with Linux real device
+[X] Test with Solaris real device
+[X] Test with older macOS real device
+
+[X] Test mount_apfs with OpenBSD
+[X] Test mount_apfs with NetBSD
+[X] Test mount_apfs with FreeBSD
+[X] Test mount_apfs with DragonFlyBSD
+[X] Test mount_apfs with Linux
+[X] Test mount_apfs with older macOS
+[X] Test mount_apfs with Solaris?
+[ ] Test mount_apfs with Windows?
+
+[X] Re-test mount_apfs with FreeBSD after extattr patch
+
+[X] Test mount_nx with OpenBSD
+[ ] Test mount_nx with NetBSD
+[ ] Test mount_nx with FreeBSD
+[X] Test mount_nx with DragonFlyBSD
+[ ] Test mount_nx with Linux
+[ ] Test mount_nx with older macOS
+[ ] Test mount_nx with Solaris?
+[ ] Test mount_nx with Windows?
+
+[X] Create fs bundle for older macOS
+
+[ ] Test sparse file
+[ ] Test snapshots

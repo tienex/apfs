@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BuildFlavor</key>
+	<string></string>
+	<key>BuildMachineOSBuild</key>
+	<string>16G29</string>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleGetInfoString</key>
+	<string>1.0.0, Copyright Orlando Bassotto 2017-present</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.github.nextie.filesystems.nxapfs</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>nxapfs</string>
+	<key>CFBundlePackageType</key>
+	<string>fs  </string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0.0</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>1.0.0</string>
+	<key>DTCompiler</key>
+	<string>4.2</string>
+	<key>DTPlatformBuild</key>
+	<string>10M2518</string>
+	<key>DTPlatformVersion</key>
+	<string>PG</string>
+	<key>DTSDKBuild</key>
+	<string>9L31a</string>
+	<key>DTSDKName</key>
+	<string>macosx10.5</string>
+	<key>DTXcode</key>
+	<string>0400</string>
+	<key>DTXcodeBuild</key>
+	<string>10M2518</string>
+	<key>FSMediaTypes</key>
+	<dict>
+		<key>7C3457EF-0000-11AA-AA11-00306543ECAC</key>
+		<dict>
+			<key>FSMediaProperties</key>
+			<dict>
+				<key>Content Hint</key>
+				<string>7C3457EF-0000-11AA-AA11-00306543ECAC</string>
+				<key>Leaf</key>
+				<true/>
+			</dict>
+			<key>FSProbeArguments</key>
+			<string></string>
+			<key>FSProbeExecutable</key>
+			<string>nx_probe</string>
+			<key>FSProbeOrder</key>
+			<integer>100</integer>
+		</dict>
+		<key>Whole</key>
+		<dict>
+			<key>FSMediaProperties</key>
+			<dict>
+				<key>Leaf</key>
+				<true/>
+				<key>Whole</key>
+				<true/>
+			</dict>
+			<key>FSProbeArguments</key>
+			<string></string>
+			<key>FSProbeExecutable</key>
+			<string>nx_probe</string>
+			<key>FSProbeOrder</key>
+			<integer>100</integer>
+		</dict>
+	</dict>
+	<key>FSPersonalities</key>
+	<dict>
+		<key>APFS</key>
+		<dict>
+			<key>FSFormatContentMask</key>
+			<string>7C3457EF-0000-11AA-AA11-00306543ECAC</string>
+			<key>FSMountArguments</key>
+			<string>allow_other,local</string>
+			<key>FSMountExecutable</key>
+			<string>mount_nx</string>
+			<key>FSName</key>
+			<string>APFS</string>
+		</dict>
+	</dict>
+	<key>NSHumanReadableCopyright</key>
+	<string>Copyright © 2017-present Orlando Bassotto. All rights reserved.</string>
+</dict>
+</plist>
